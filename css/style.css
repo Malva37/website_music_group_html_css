@@ -89,6 +89,12 @@ nav {
     text-transform: uppercase;
     letter-spacing: 0.65px;
     padding: 0 1.2vw;
+
+}
+
+.item_header:hover {
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
 .item_header.active {
@@ -97,31 +103,49 @@ nav {
     margin: 0;
 }
 
+.logo {
+    cursor: pointer;
+}
+
 .social_buyTicket {
     display: flex;
     align-items: center;
 }
 
-.social {
+.header_top .social {
     display: flex;
 }
 
-.social_item {
+.header_top .social_item {
+    position: relative;
+}
+
+.header_top .social_item span {
     color: #ffffff;
     font-family: "Open Sans";
     font-size: 14px;
     font-weight: 400;
-    line-height: calc(14px + 0.83vw);
     text-transform: uppercase;
     margin-right: 2.4vw;
+    cursor: pointer;
+}
+
+.header_top .social_item img+span {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%)
 }
 
 .social_item:last-child {
     margin-right: 0;
 }
 
-.social_item i {
+.header_top .social_item i,
+.header_top .social_item img {
     margin-right: 0.52vw;
+    font-size: calc(14px + 0.4vw);
+    color: #ffffff;
+
 }
 
 
@@ -134,7 +158,16 @@ nav {
     letter-spacing: 0.6px;
     border: none;
     border-radius: 35px;
+    transition: 0.5s;
 
+}
+
+.btn:hover {
+    cursor: pointer;
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+    transition: 0.5s;
 }
 
 .buy_ticket {
@@ -178,25 +211,25 @@ nav {
 .title_slogan {
     color: #df001f;
     font-family: "Oswald - Heavy";
-    font-size: 116px;
+    font-size: calc(14px + 5.31vw);
     font-weight: 400;
-    line-height: 85.6px;
+    line-height: calc(14px + 3.73vw);
     text-transform: uppercase;
-    padding: 208px 0 5px;
+    padding: 10.83vw 0 0.26vw;
 }
 
 .text_slogan {
     color: #333333;
     font-family: "Great Vibes";
-    font-size: 80px;
+    font-size: calc(14px + 3.44vw);
     font-weight: 400;
-    line-height: 160.5px;
-    padding: 0 0 90px;
+    line-height: calc(14px + 7.6vw);
+    padding: 0 0 4.68vw;
 
 }
 
 .discover_more {
-    margin: 0 0 174px;
+    margin: 0 0 9.06vw;
     background-color: #df001f;
     color: #fff;
 }
@@ -204,7 +237,7 @@ nav {
 /* header */
 
 .members_section {
-    padding: 100px 0;
+    padding: 5.21vw 0;
 }
 
 .title_section h1 {
@@ -213,7 +246,7 @@ nav {
     line-height: calc(14px + 0.83vw);
     font-weight: 400;
     letter-spacing: 3.2px;
-    margin: 0 0 4px;
+    margin: 0 0 0.21vw;
     text-transform: uppercase;
     padding: 0;
 }
@@ -221,7 +254,6 @@ nav {
 .title_section p {
     color: #df001f;
     font-family: "Great Vibes";
-    font-size: 32px;
     font-size: calc(14px + 0.93vw);
     font-weight: 400;
     line-height: calc(14px + 0.83vw);
@@ -250,11 +282,16 @@ nav {
     font-size: calc(14px + 0.52vw);
     font-weight: 400;
     line-height: 35px;
+    cursor: pointer;
 
 }
 
+.arrow:disabled {
+    cursor: unset;
+}
+
 .prev_member {
-    margin-right: 5px;
+    margin-right: 0.26vw;
 }
 
 .prev_member:disabled,
@@ -281,6 +318,13 @@ nav {
     left: 0;
     padding-left: inherit;
     padding-right: inherit;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.member:hover {
+    transform: scale(1.03);
+    transition: 0.5s;
 }
 
 .member img {
@@ -289,6 +333,8 @@ nav {
     height: 100%;
     width: 100%;
 }
+
+/* .member img: */
 
 .social_data_member {
     display: none;
@@ -303,30 +349,26 @@ nav {
     background-color: #df001f;
     width: 100%;
     color: #fff;
-    padding-top: 17px;
+    padding-top: 0.89vw;
     padding-left: inherit;
+   
 }
 
 .name_member {
-    font-size: 22px;
+    font-size: calc(14px + 0.42vw);
     font-weight: 400;
-    line-height: 20px;
-    margin-bottom: 9px;
+    line-height: calc(14px + 0.31vw);
+    margin-bottom: 0.47vw;
     font-family: "Oswald - Regular";
-    font-weight: 400;
     text-transform: capitalize;
     text-indent: 1.4vw;
 }
 
 .position_member {
-    font-size: 22px;
-    font-weight: 400;
-    line-height: 20px;
     font-family: "Droid Sans";
-    font-size: 16px;
-    margin-bottom: 25px;
+    font-size: calc(14px + 0.1vw);
+    margin-bottom: 1.3vw;
     text-indent: 1.4vw;
-
 }
 
 .member.active .data_member {
@@ -335,14 +377,33 @@ nav {
 
 .member.active .data_member .social_data_member {
     display: flex;
+    max-width: 10.26vw;
+    justify-content: space-between;
+}
+
+.data_member .social_item {
+    display: flex;
+    margin-right: 1vw;
+    cursor: pointer;
+}
+.data_member .social_item span{  
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.data_member .social_item i, .data_member .social_item img{
+    font-size: calc(14px + 0.4vw);
+    margin-right: 0.52vw;
 }
 
 /* member section */
 
 
 .consert_videos {
-    padding-top: 97px;
-    padding-bottom: 100px;
+    padding-top: 5.05vw;
+    padding-bottom: 5.21vw;
     display: flex;
     justify-content: space-between;
 }
@@ -358,7 +419,7 @@ nav {
 
 .conserts {
     position: relative;
-    margin-top: 41px;
+    margin-top: 2.14vw;
     outline: none;
     z-index: 1;
 }
@@ -401,19 +462,21 @@ nav {
 }
 
 .data_consert {
-    min-width: 270px;
+    min-width: 14.46vw;
     border: 1px;
-    margin-top: 23px;
-    margin-bottom: 31px;
+    margin-top: 1.19vw;
+    margin-bottom: 1.16vw;
 }
 
 .consert_data_box caption {
     color: #333333;
     font-family: "Oswald Medium";
-    font-size: 22px;
+    /* font-size: 22px; */
+    font-size: calc(14px + 0.42vw);
     font-weight: 500;
-    line-height: 30px;
-    margin-bottom: 33px;
+    /* line-height: 30px; */
+    line-height: calc(14p + 0.83vw);
+    margin-bottom: 1.71vw;
 }
 
 .data_consert tr {
@@ -473,7 +536,7 @@ nav {
 .video {
     outline: none;
     position: relative;
-    padding-top: 40px;
+    padding-top: 2.08vw;
 
 }
 
@@ -540,6 +603,7 @@ nav {
     top: 0;
     z-index: 5;
     outline: none;
+    cursor: pointer;
 
 }
 
@@ -579,6 +643,7 @@ nav {
 
 .videos .slick-arrow.slick-disabled {
     opacity: 0.5;
+    cursor: unset;
 }
 
 /* consert & video */
@@ -589,14 +654,14 @@ nav {
 }
 
 .founder_slogan {
-    padding-top: 86px;
+    padding-top: 4.48vw;
     color: #ffffff;
     font-family: "Oswald Medium";
     font-size: calc(14px + 0.93vw);
     font-weight: 500;
     line-height: calc(14px + 1.87vw);
     text-transform: uppercase;
-    max-width: 489px;
+    max-width: 25.47vw;
 }
 
 .founder_history {
@@ -604,8 +669,8 @@ nav {
     font-family: "Droid Sans";
     font-size: calc(14px + 0.42vw);
     font-weight: 400;
-    padding-bottom: 47px;
-    max-width: 556px;
+    padding-bottom: 2.45vw;
+    max-width: 28.96vw;
 }
 
 .founder_history span {
@@ -616,7 +681,7 @@ nav {
 }
 
 .learn_more {
-    margin-bottom: 81px;
+    margin-bottom: 2.42vw;
     color: #df001f;
     font-family: "Droid Sans";
     font-size: 12px;
@@ -629,12 +694,13 @@ nav {
 
 
 .audio_instagram {
-    padding-top: 104px;
+    padding-top: 5.42vw;
     display: flex;
+    padding-bottom: 4.43vw;
 }
 
 .instagram_box {
-    min-width: 370px;
+    /* min-width: 370px; */
     min-width: 19.27vw;
 }
 
@@ -655,7 +721,8 @@ nav {
 
 .audio_main {
     display: flex;
-    padding-top: 1.71vw;;
+    padding-top: 1.71vw;
+    ;
 
 }
 
@@ -675,8 +742,9 @@ nav {
     list-style: decimal-leading-zero;
     list-style-position: inside;
     padding-left: 0;
+    /* margin: 3.59vw 0 0 0; */
+    margin: 1.5vw 0 0 0;
 
-    margin: 3.59vw 0 0 0;
 }
 
 .audio_list ol li {
@@ -685,9 +753,182 @@ nav {
     font-family: "Droid Sans";
     font-size: calc(14px + 0.1vw);
     font-weight: 400;
-    /* line-height: calc(14px + 1.35vw); */
     line-height: calc(14px + 0.5vw);
     max-width: 8.7vw;
 }
 
+.audio_list ol li:hover {
+    color: #6e64649c;
+    cursor: pointer;
+
+}
+
 /* audio & instagram */
+
+
+.app_section {
+    background: url(/img/bg_app.png) 100% no-repeat #000000;
+    padding: 4.16vw 0 6.25vw;
+    text-align: center;
+    background-size: cover;
+}
+
+.app_call {
+    color: #ffffff;
+    font-family: "Oswald - Regular";
+    font-size: calc(14px + 0.94vw);
+    font-weight: 500;
+    line-height: calc(14px + 1.77vw);
+}
+
+.app_slogan {
+    color: #ffffff;
+    font-family: "Droid Sans";
+    font-size: calc(14px + 0.42vw);
+    font-weight: 400;
+    line-height: calc(14px + 0.83vw);
+    letter-spacing: 1.1px;
+    /* margin: 8px 0 41px; */
+    margin: 0.42vw 0 2.14vw;
+
+}
+
+.app_buttons {
+    display: flex;
+    justify-content: space-around;
+    /* max-width: 340px; */
+    max-width: 17.7vw;
+    margin: 0 auto;
+}
+
+.area {
+    padding: 0.52vw 1.35vw;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 7px;
+    display: flex;
+    text-align: start;
+    cursor: pointer;
+
+}
+
+.area>img {
+    margin-right: 0.36vw;
+}
+
+.area_call {
+    font-family: "Myriad Pro";
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+}
+
+.area_call span {
+    display: block;
+    font-family: "Myriad Pro - Semibold";
+    font-size: calc(14px + 0.2vw);
+    font-weight: 600;
+}
+
+
+/* app section */
+
+
+.subscripe_section {
+    padding-top: 5.46vw;
+    padding-bottom: 3.65vw;
+
+}
+
+.subscripe_form {
+    position: relative;
+    margin: 0 auto;
+    max-width: 27.6vw;
+    border-bottom: 4px solid #999999;
+}
+
+.email_subscripe {
+    color: #282828;
+    font-family: "Droid Sans";
+    font-size: calc(14px + 0.1vw);
+    font-weight: 400;
+    width: 100%;
+    line-height: calc(14px + 0.56vw);
+    border: none;
+    letter-spacing: 3.2px;
+    z-index: 1;
+    padding-bottom: 0.98vw;
+    cursor: pointer;
+}
+
+.button_subscripe {
+    position: absolute;
+    color: #df001f;
+    font-size: calc(14px + 0.1vw);
+    border: none;
+    background-color: white;
+    right: 0;
+    bottom: 25%;
+    z-index: 5;
+    cursor: pointer;
+}
+
+/* subscripe section */
+
+
+footer {
+    padding-top: 3.59vw;
+    padding-bottom: 4.68vw;
+
+}
+
+.footer_top {
+    margin: 0 auto;
+    max-width: 26.04vw;
+    margin-bottom: 1.82vw;
+
+}
+
+.menu_footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item_footer {
+    color: #333333;
+    font-family: "Droid Sans";
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.item_footer:hover {
+    font-weight: 700;
+    cursor: pointer;
+    color: #df001f;
+}
+
+.footer_bottom {
+    margin: 0 auto;
+    max-width: 31.25vw;
+
+}
+
+.copyright {
+    color: #333333;
+    font-size: 13px;
+    font-weight: 400;
+    font-family: "Droid Sans - Regular";
+    letter-spacing: 1px;
+}
+
+.copyright span {
+    color: #df001f;
+    font-family: "Great Vibes";
+    font-size: calc(14px + 0.73vw);
+    font-weight: 400;
+}
+
+
+/* footer */

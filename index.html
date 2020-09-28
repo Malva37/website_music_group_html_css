@@ -17,23 +17,23 @@
     <header>
         <div class="header_top">
             <nav>
-                <ul class="menu_header">
-                    <li class="item_header active">home</li>
-                    <li class="item_header">Events</li>
-                    <li class="item_header">Gallery</li>
-                    <li class="item_header">News</li>
-                    <li class="item_header">Albums</li>
-                    <li class="item_header">Pages</li>
-                </ul>
+                <div class="menu_header">
+                    <a  href="#home" class="item_header active">home</a>
+                    <a  href="#events" class="item_header">Events</a>
+                    <a  href="#gallery" class="item_header">Gallery</a>
+                    <a  href="#news" class="item_header">News</a>
+                    <a  href="#albums" class="item_header">Albums</a>
+                    <a  href="#pages" class="item_header">Pages</a>
+                </div>
             </nav>
             <div class="logo">
                 <img src="img/logo.png" alt="Logo">
             </div>
             <div class="social_buyTicket">
                 <div class="social">
-                    <div class="social_item"><i class="fab fa-facebook-f"></i> 32k</div>
-                    <div class="social_item"><i class="fab fa-twitter"></i> 55k</div>
-                    <div class="social_item"><i class="fab fa-goodreads-g"></i> 23k</div>
+                    <div class="social_item"><i class="fab fa-facebook-f"></i><span> 32k</span></div>
+                    <div class="social_item"><i class="fab fa-twitter"></i><span> 55k</span></div>
+                    <div class="social_item"><img src="img/google_icon.png" alt=""><span> 23k</span></div>
                 </div>
                 <button class="buy_ticket btn">purchase Ticket</button>
             </div>
@@ -46,7 +46,7 @@
         </div>
     </header>
     <div class="wrapper">
-        <section class="members_section">
+        <section id="home" class="members_section">
             <div class="title_section">
                 <h1>INTRODUCING</h1>
                 <p>Our Members</p>
@@ -64,9 +64,9 @@
                             <div class="name_member">Jone smith</div>
                             <div class="position_member">Vocal</div>
                             <div class="social_data_member">
-                                <div class="social_item"><i class="fab fa-facebook-f"></i> 32k</div>
-                                <div class="social_item"><i class="fab fa-twitter"></i> 55k</div>
-                                <div class="social_item"><i class="fab fa-goodreads-g"></i> 23k</div>
+                                <div class="social_item"><i class="fab fa-facebook-f"></i><span> 32k</span></div>
+                                <div class="social_item"><i class="fab fa-twitter"></i><span> 55k</span></div>
+                                <div class="social_item"><img src="img/google_icon.png" alt=""><span> 23k</span></div>
                             </div>
                         </div>
                     </div>
@@ -76,9 +76,9 @@
                             <div class="name_member">Rendi Outhor</div>
                             <div class="position_member">Drum</div>
                             <div class="social_data_member">
-                                <div class="social_item"><i class="fab fa-facebook-f"></i> 32k</div>
-                                <div class="social_item"><i class="fab fa-twitter"></i> 55k</div>
-                                <div class="social_item"><i class="fab fa-goodreads-g"></i> 23k</div>
+                                <div class="social_item"><i class="fab fa-facebook-f"></i><span> 32k</span></div>
+                                <div class="social_item"><i class="fab fa-twitter"></i><span> 55k</span></div>
+                                <div class="social_item"><img src="img/google_icon.png" alt=""><span> 23k</span></div>
                             </div>
                         </div>
                     </div>
@@ -88,9 +88,9 @@
                             <div class="name_member">Renes Odim</div>
                             <div class="position_member">Guiter</div>
                             <div class="social_data_member">
-                                <div class="social_item"><i class="fab fa-facebook-f"></i> 32k</div>
-                                <div class="social_item"><i class="fab fa-twitter"></i> 55k</div>
-                                <div class="social_item"><i class="fab fa-goodreads-g"></i> 23k</div>
+                                <div class="social_item"><i class="fab fa-facebook-f"></i><span> 32k</span></div>
+                                <div class="social_item"><i class="fab fa-twitter"></i><span> 55k</span></div>
+                                <div class="social_item"><img src="img/google_icon.png" alt=""><span> 23k</span></div>
                             </div>
                         </div>
 
@@ -101,9 +101,9 @@
                             <div class="name_member">Jone smith</div>
                             <div class="position_member">Vocal</div>
                             <div class="social_data_member">
-                                <div class="social_item"><i class="fab fa-facebook-f"></i> 32k</div>
-                                <div class="social_item"><i class="fab fa-twitter"></i> 55k</div>
-                                <div class="social_item"><i class="fab fa-goodreads-g"></i> 23k</div>
+                                <div class="social_item"><i class="fab fa-facebook-f"></i><span> 32k</span></div>
+                                <div class="social_item"><i class="fab fa-twitter"></i><span> 55k</span></div>
+                                <div class="social_item"><img src="img/google_icon.png" alt=""><span> 23k</span></div>
                             </div>
                         </div>
                     </div>
@@ -115,7 +115,7 @@
         <hr>
 
         <section class="consert_videos">
-            <div class="consert_box">
+            <div id="events" class="consert_box">
                 <div class="title_section">
                     <h1>UPCOMING</h1>
                     <p>Consert</p>
@@ -240,14 +240,13 @@
 
                 </div>
             </div>
-            <div class="videos_box">
+            <div id="news" class="videos_box">
                 <div class="title_section">
                     <h1>LATEST</h1>
                     <p>Videos</p>
                 </div>
                 <div class="videos">
                     <div class="video">
-                        <!-- <video preload="metadata" class="videoFile" poster="img/video_poster.png"> -->
                         <video preload="metadata" class="videoFile">
                             <source src="video/video_main.mp4">
                         </video>
@@ -286,7 +285,7 @@
 
 
         <section class="audio_instagram">
-            <div class="audio_box">
+            <div id="albums" class="audio_box">
                 <div class="title_section">
                     <h1>POPULAR</h1>
                     <p>Songs</p>
@@ -320,7 +319,7 @@
                 </div>
             </div>
 
-            <div class="instagram_box">
+            <div id="gallery" class="instagram_box">
                 <div class="title_section">
                     <h1>Instagram</h1>
                     <p>Feed</p>
@@ -333,8 +332,50 @@
                 </div>
             </div>
         </section>
+        <section id="pages" class="app_section">
+            <div class="app_call">Download Our Official Apps</div>
+            <div class="app_slogan">Never stop listening. Take your playlists and likes wherever you go.</div>
+            <div class="app_buttons">
+                <button class="area">
+                    <img src="img/apple_icon.png" alt="">
+                    <div class="area_call">Download on the <span>App Store</span></div>
+                </button>
+                <button class="area">
+                    <img src="img/google_play_icon.png" alt="">
+                    <div class="area_call">Get it on
+                        <br>
+                        <img src="img/google_play_title.png" alt="">
+                    </div>
+
+                </button>
+            </div>
+        </section>
+        <section class="subscripe_section">
+            <form class="subscripe_form" action="">
+                <input type="email" class="email_subscripe" placeholder="subscribe newsletter">
+                <button class="button_subscripe"><i class="fas fa-arrow-right"></i></button>
+            </form>
+        </section>
     </div>
-    <footer></footer>
+    <hr>
+    <footer>
+        <div class="footer_top">
+            <nav>
+                <div class="menu_footer">
+                    <a  href="#home" class="item_footer active">home</a>
+                    <a  href="#events" class="item_footer">Events</a>
+                    <a  href="#gallery" class="item_footer">Gallery</a>
+                    <a  href="#news" class="item_footer">News</a>
+                    <a  href="#albums" class="item_footer">Albums</a>
+                    <a  href="#pages" class="item_footer">Pages</a>
+                </div>
+            </nav>
+        </div>
+        <div class="footer_bottom">
+<div class="copyright">Copyright © 2009–2016 <span>cantus</span> © their respective owners. Shipped from Salem, Mass. USA.</div>
+        </div>
+
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
         integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="

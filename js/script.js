@@ -11,6 +11,7 @@ let members = document.querySelectorAll('.member');
 let member = document.querySelector('.member');
 let prevMember = document.querySelector('.prev_member');
 let nextMember = document.querySelector('.next_member');
+let headerItems = document.querySelectorAll('.item_header');
 
 let memberCount = members.length;
 let coefficientMarginMember = 0.016;
@@ -51,16 +52,19 @@ const setPosition = (pos, list) => {
     list.style.transform = `translateX(${pos}px)`
 }
 
-members.forEach(element => {
-    // console.log(element);
-    element.addEventListener('click', () => {
-        console.log(this);
-        members.forEach(element => {
-            element.className = 'member';
+let checkActive = function (list) {
+    list.forEach(element => {
+        element.addEventListener('click', () => {
+            list.forEach(element => {
+                element.classList.remove("active");
+            })
+            element.className += ' active';
         })
-        element.className += ' active';
-    })
-});
+    });
+}
+
+checkActive(members);
+checkActive(headerItems);
 
 
 let checkBtn = () => {
@@ -74,14 +78,14 @@ $(document).ready(function () {
 
     $('.conserts').slick({
         arrows: false,
-        dots:true,
-        infinite:false
+        dots: true,
+        infinite: false
 
     });
     $('.videos').slick({
         adaptiveHeight: true,
-        infinite:false,
-        initialSlide:1
+        infinite: false,
+        initialSlide: 1
 
     });
 
@@ -109,7 +113,7 @@ $(document).ready(function () {
         $(".video_button").css('backgroundColor', '#df001f');
         btn.removeClass("pause").addClass(" play");
         $('.slick-slide.slick-current .videoFile').get(0).pause();
- });
+    });
     btn.click(function () {
         tooglePlayPause();
     });
